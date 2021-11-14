@@ -214,7 +214,7 @@ footer {
 
 				<div class="block">
 					<label id="LText">Workers: </label>
-					<input id="Workes" type="number" min="1" max="50" value="2"></input>
+					<input id="Workes" type="number" min="1" max="50" value="1"></input>
 				</div>
 				
 
@@ -275,6 +275,7 @@ function updateValues(){
 	workers = parseInt(document.getElementById('Workes').value,10);
 	wr = parseInt(document.getElementById('WinRate').value,10);
 	
+	
 	if (isNaN(planet) || isNaN(workers) || isNaN(wr)) {return;}
 	
 	val = calValues(planet, workers, wr)+"";
@@ -297,6 +298,15 @@ gan_wr = (gan/100)*wr;
 contratos = workers * 1
 gas = 1;
 fuel = (getPlanetFuel(planet)/1000)*0.0755;
+
+
+console.log(gan);
+console.log(contratos);
+console.log(gas);
+console.log(fuel);
+
+	
+
 
 perdida = contratos + gas + fuel;
 
